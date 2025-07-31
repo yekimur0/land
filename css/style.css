@@ -1,0 +1,79 @@
+@import './fonts.css';
+@import './vars.css';
+@import './settings.css';
+
+@import './components/_hero.css';
+@import './components/_ticker.css';
+@import './components/_about.css';
+@import './components/_gallery.css';
+@import './components/_footer.css';
+@import './components/_complex.css';
+
+.mobile-block {
+  display: none;
+  @media (max-width: 640px) {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .img {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    border-radius: 10px;
+    background: #232323;
+    padding: 13px 13px 24px 13px;
+  }
+  .futures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    .future {
+      border-radius: 10px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      text-align: center;
+      color: #cb2424;
+      background: #fff;
+      padding: 10px 15px;
+    }
+  }
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #fff;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+  .btn-def {
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .desc {
+    margin-top: 11px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    padding-left: 50px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 41px;
+      height: 41px;
+      background: url('../img/arrow.svg') no-repeat;
+    }
+  }
+}

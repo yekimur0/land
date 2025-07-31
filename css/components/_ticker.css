@@ -1,0 +1,33 @@
+.ticker {
+  position: relative;
+  overflow: hidden;
+  padding-block: 20px;
+}
+
+.ticker__wrapper {
+  display: flex;
+}
+
+.ticker__item {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 155%;
+  color: #161616;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 10px;
+  animation: ticker 10s linear infinite;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

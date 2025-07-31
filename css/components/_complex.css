@@ -1,0 +1,118 @@
+.complex {
+  margin-top: 20px;
+  .complex-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .left {
+    img {
+      border-radius: 10px;
+    }
+  }
+  .title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(22px, 2vw, 30px);
+    line-height: 157%;
+    color: #f8f8f8;
+    margin-bottom: 75px;
+    @media (max-width: 640px) {
+      margin-bottom: 50px;
+    }
+  }
+  .right {
+    background: #232323;
+    border-radius: 10px;
+    padding: 60px 55px;
+    @media (max-width: 992px) {
+      padding: 25px 15px;
+    }
+  }
+
+  .complex-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 120px;
+    row-gap: 66px;
+    padding-left: 10px;
+    @media (max-width: 640px) {
+      margin-bottom: 60px;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-top: 63px;
+      border-left: 1px solid #fff;
+      padding-left: 40px;
+      @media (max-width: 992px) {
+        padding-left: 15px;
+        padding-top: 40px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -22px;
+        left: -17px;
+        border: 1px solid #fff;
+        background-color: #232323;
+        border-radius: 50px;
+        width: 32px;
+        height: 32px;
+        @media (max-width: 640px) {
+          width: 18px;
+          height: 18px;
+          top: -15px;
+          left: -10px;
+        }
+      }
+      .number {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 100%;
+        color: #f8f8f8;
+        margin-bottom: 8px;
+      }
+      .text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(11px, 1.5vw, 14px);
+        line-height: 100%;
+        color: #f8f8f8;
+      }
+    }
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    color: #f8f8f8;
+    margin-top: 11px;
+    text-align: center;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    max-width: 222px;
+    @media (max-width: 640px) {
+      max-width: 100%;
+      justify-content: center;
+    }
+  }
+  .btn {
+    max-width: 222px;
+    width: 100%;
+    @media (max-width: 640px) {
+      max-width: 100%;
+    }
+  }
+}

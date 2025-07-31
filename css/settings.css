@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-reset {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 120%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  max-width: 1876px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  text-align: center;
+  color: #fff;
+  background: #ca0000;
+  border-radius: 10px;
+  padding: 12px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flare-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.flare-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 75px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: flare 2s linear infinite;
+}
+
+@keyframes flare {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
